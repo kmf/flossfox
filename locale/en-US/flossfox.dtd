@@ -1,0 +1,30 @@
+<!ENTITY flossfox.title     "Flossfox">
+
+<!ENTITY flossfox.prefs.title "Flossfox Preferences">
+
+<!ENTITY flossfox.prefs.accountGroup "Account">
+<!ENTITY flossfox.prefs.service "Service:">
+<!ENTITY flossfox.prefs.service.accesskey "V">
+<!ENTITY flossfox.prefs.username "Username:">
+<!ENTITY flossfox.prefs.username.accesskey "U">
+<!ENTITY flossfox.prefs.password "Password:">
+<!ENTITY flossfox.prefs.password.accesskey "P">
+
+<!ENTITY flossfox.prefs.settingsGroup "Settings">
+<!ENTITY flossfox.prefs.tweetsPerPage "Tweets per page:">
+<!ENTITY flossfox.prefs.tweetsPerPage.accesskey "T">
+<!ENTITY flossfox.prefs.refreshInterval "Refresh interval:">
+<!ENTITY flossfox.prefs.refreshInterval.minutes "minutes">
+<!ENTITY flossfox.prefs.refreshInterval.accesskey "I">
+<!ENTITY flossfox.prefs.resolveLinks "Expand shortened links">
+<!ENTITY flossfox.prefs.resolveLinks.accesskey "X">
+<!ENTITY flossfox.prefs.backgroundTabs "Open new tabs in the background">
+<!ENTITY flossfox.prefs.backgroundTabs.accesskey "B">
+
+<!ENTITY flossfox.service.twitter "Twitter">
+<!ENTITY flossfox.service.flosspro "Floss.pro">
+
+<!ENTITY flossfox.statusbar.tooltip "Toggle the Flossfox sidebar">
+
+<!ENTITY openFlossfoxSidebar.commandkey    "L">
+<!ENTITY openFlossfoxSidebar.modifierskey  "shift accel">

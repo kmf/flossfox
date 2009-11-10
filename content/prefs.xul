@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type"text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://flossfox/skin/flossfox.css" type="text/css"?>
+
+<!DOCTYPE page SYSTEM "chrome://flossfox/locale/flossfox.dtd">
+
+<prefwindow id="flossfoxPreferences" title="&flossfox.prefs.title;"
+            onload="initPrefsDialog();"
+            onunload="applyPrefsDialog();"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="prefs.js"/>
+  <prefpane id="flossfoxPane1" label="$flossfox.title;">
+    <preferences>
+      <preference id="service" name="extensions.flossfox.service" type="string"/>
+      <preference id="username" name="extensions.flossfox.username" type="string"/>
+      <preference id="refreshInterval" name="extensions.flossfox.refreshInterval" type="int"/>
+      <preference id="tweetsPerPage" name="extensions.flossfox.tweetsPerPage" type="int"/>
+      <preference id="resolveLinks" name="extensions.flossfox.resolveLinks" type="bool"/>
+      <preference id="backgroundTabs" name="extensions.flossfox.backgroundTabs" type="bool"/>
+    </preferences>
+    
+    <groupbox>
+        <caption label="&flossfox.prefs.accountGroup;"/>
+        <grid>
+            <columns>
+                <column flex="1"/>
+                <column flex="2"/>
+            </columns>
+            <rows>
+                <row align="center">
+                    <label value="&flossfox.prefs.service;" control="bService" accesskey="&flossfox.prefs.service.accesskey;"/>
+                    <menulist id="bService" preference="service">
+                        <menupopup>
+                            <menuitem label="&flossfox.service.twitter;" value="twitter"/>
+                            <menuitem label="&flossfox.service.flosspro;" value="flosspro"/>
+                        </menupopup>
+                    </menulist>
+                </row>
+                <row align="center">
+                    <label value="&flossfox.prefs.username;" control="bUsername" accesskey="&flossfox.prefs.username.accesskey;"/>
+                    <textbox id="bUsername" preference="username"/>
+                </row>
+                <row align="center">
+                    <label value="&flossfox.prefs.password;" control="bPassword" accesskey="&flossfox.prefs.password.accesskey;"/>
+                    <textbox id="bPassword" type="password"/>
+                </row>
+            </rows>
+        </grid>
+    </groupbox>
+    
+    <groupbox>
+        <caption label="&flossfox.prefs.settingsGroup;"/>
+        <grid>
+            <columns>
+                <column flex="1"/>
+                <column flex="2"/>
+            </columns>
+            <rows>
+                <row align="center">
+                    <label value="&flossfox.prefs.tweetsPerPage;" control="bTweetsPerPage"
+                    	   accesskey="&flossfox.prefs.tweetsPerPage.accesskey;"/>
+                    <textbox id="bTweetsPerPage" min="1" max="200" increment="5"
+                             preference="tweetsPerPage" type="number"/>
+                </row>
+                <row align="center">
+                    <label value="&flossfox.prefs.refreshInterval;" control="bRefreshInterval"
+                    	   accesskey="&flossfox.prefs.refreshInterval.accesskey;"/>
+                    <hbox flex="1" align="center">
+                        <textbox id="bRefreshInterval" min="1" preference="refreshInterval" type="number"/>
+                        <label value="minutes" control="bRefreshInterval"/>
+                    </hbox>
+                </row>
+            </rows>
+        </grid>
+        <checkbox id="bResolveLinks" preference="resolveLinks"
+                  label="&flossfox.prefs.resolveLinks;" accesskey="&flossfox.prefs.resolveLinks.accesskey;"/>
+        <checkbox id="bBackgroundTabs" preference="backgroundTabs"
+                  label="&flossfox.prefs.backgroundTabs;" accesskey="&flossfox.prefs.backgroundTabs.accesskey;"/>
+    </groupbox>
+     
+  </prefpane>
+</prefwindow>

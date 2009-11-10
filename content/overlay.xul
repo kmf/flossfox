@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://flossfox/locale/flossfox.dtd">
+<overlay id="flossfoxSidebarOverlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <menupopup id="viewSidebarMenu">
+        <menuitem key="key_openFlossfoxSidebar" observes="viewFlossfoxSidebar"  />
+    </menupopup>
+
+    <keyset id="mainKeyset">
+        <key id="key_openFlossfoxSidebar" command="viewFlossfoxSidebar"
+            key="&openFlossfoxSidebar.commandkey;" 
+            modifiers="&openFlossfoxSidebar.modifierskey;" />
+    </keyset>
+
+    <broadcasterset id="mainBroadcasterSet"> 
+        <broadcaster id="viewFlossfoxSidebar" 
+            label="&flossfox.title;"
+            autoCheck="false"
+            type="checkbox"
+            group="sidebar"
+            sidebarurl="chrome://flossfox/content/flossfox.xul"
+            sidebarTitle="&flossfox.title;"
+            oncommand="toggleSidebar('viewFlossfoxSidebar');" />
+    </broadcasterset>
+    
+    <statusbar id="status-bar">
+        <statusbarpanel id="flossfoxStatusBarButton" position="1"
+                        tooltiptext="&flossfox.statusbar.tooltip;"
+                        onclick="toggleSidebar('viewFlossfoxSidebar');">
+            <image id="flossfoxStatusBarButtonIcon" 
+                   src="chrome://flossfox/content/icons/statusbar.png"/>
+        </statusbarpanel>
+    </statusbar>
+
+</overlay>
